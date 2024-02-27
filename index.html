@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Midterm Review</title>
+</head>
+<nav>
+   
+</nav>
+<body>
+
+    <h1>HTML</h1>
+    <ol>
+        <li>Relative and absolute paths
+            <p class="p">Relative Path: Specifies the path relative to the current directory. Absolute Path: Specifies the complete path including the protocol and domain.</p>
+        </li>
+        <li>Div tags
+            <p class="p">The &lt;div&gt; tag is used to group block-level content and is often used for styling or as a container for other elements.</p>
+        </li>
+        <li>Required HTML elements - boilerplate - html, head, title, body
+            <p class="p">Essential HTML boilerplate elements include &lt;html&gt;, &lt;head&gt;, &lt;title&gt;, and &lt;body&gt;.</p>
+        </li>
+        <li>Block vs inline elements
+            <p class="p">Block elements start on a new line and take full width. Inline elements do not start on a new line and take only necessary width.</p>
+        </li>
+        <li>Create link, img, headings, list
+            <p class="p">Links are created with &lt;a&gt;, images with &lt;img&gt;, headings with &lt;h1&gt;-&lt;h6&gt;, and lists with &lt;ul&gt;/&lt;ol&gt; and &lt;li&gt;.</p>
+        </li>
+        <li>Attributes of img, a elements
+            <p class="p">&lt;img&gt; attributes include src, alt, width, height. &lt;a&gt; attributes include href, target, rel.</p>
+        </li>
+        <li>Font units/families - fixed vs dynamic
+            <p class="p">Fixed units like px do not scale, whereas dynamic units like em, rem, and % scale with parent or root element's font size.</p>
+        </li>
+        <li>Forms - collect data
+            <p class="p">Forms collect user input through elements like &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;, &lt;select&gt;, and &lt;option&gt;.</p>
+            <p class="p">
+                <form action="/action_page.php">
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" value="John"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                    <input type="submit" value="Submit">
+                  </form>
+            </p>
+        </li>
+    </ol>
+    <h1>CSS</h1>
+    <h2>Internal vs External CSS</h2>
+    <ul>
+        <li>Internal CSS is written inside the HTML using a &lt;style&gt; element.</li>
+        <li>External CSS is stored in a separate file (e.g., style.css) and linked to the HTML.</li>
+    </ul>
+
+    <h2>CSS Selectors</h2>
+    <ul>
+        <li><strong>Element Selector:</strong> Targets HTML elements directly.</li>
+        <li><strong>Class Selector:</strong> Targets elements with a specific class attribute. Written as .classname.</li>
+        <li><strong>ID Selector:</strong> Targets an element with a specific id attribute. Written as #id.</li>
+    </ul>
+
+    <h2>Descendant Selectors</h2>
+    <p>Descendant selectors in CSS are used to select an element that is nested within another element, regardless of the depth of nesting. Written with a space between two or more selectors. Styles are applied to the innermost selector if it is a descendant of the outer selector(s).</p>
+
+    <h2>Other CSS Concepts</h2>
+    <ul>
+        <li>Pseudo-classes (e.g., :hover) are used to define the special state of an element.</li>
+        <li>The CSS Box Model describes the design and layout of elements, including margins, borders, padding, and the actual content.</li>
+        <li>Responsive web design ensures web applications look good on all devices.</li>
+        <li>Responsive layouts can be achieved using float, flexbox, or CSS grid.</li>
+        <li>Grid layouts establish a column structure for placing elements.</li>
+        <li>Flexbox is used for spacing layout and aligning items in a container.</li>
+        <li>Media queries allow the application of CSS rules based on device characteristics, such as screen width.</li>
+        <li>Centering block elements can be done using various CSS techniques.</li>
+    </ul>
+
+
+    <h1>JavaScript</h1>
+    <h2>Run-time Environment</h2>
+    <p>JavaScript can run in a browser or on a server (using Node.js).</p>
+
+    <h2>Functions</h2>
+    <h3>Callbacks & Higher Order Functions</h3>
+    <p>A higher-order function is a function that takes another function as an argument or returns a function.</p>
+    <code>
+        function higherOrderFunction(callback) {
+            callback();
+        }
+    </code>
+
+    <h3>Anonymous and Arrow Functions</h3>
+    <code>
+        const arrowFunction = () => console.log('This is an arrow function');
+    </code>
+
+    <h2>Variables & Scope</h2>
+    <p>JavaScript supports <code>const</code>, <code>let</code>, and <code>var</code> for declaring variables.</p>
+
+    <h2>JavaScript Types</h2>
+    <p>JavaScript provides types like Number, String, Boolean, Object, etc.</p>
+
+    <h2>DOM Manipulation</h2>
+    <p>The Document Object Model (DOM) can be manipulated to change the document structure, style, and content.</p>
+    <code>
+        document.querySelector('h1').textContent = 'Changed Heading';
+    </code>
+
+    <h2>Selecting Nodes</h2>
+    <code>
+        const elementById = document.getElementById('id');
+        const elementsByClass = document.getElementsByClassName('class');
+        const elementsByTag = document.getElementsByTagName('tag');
+    </code>
+
+    <h2>Asynchronous JavaScript</h2>
+    <h3>Callbacks</h3>
+    <code>
+        function fetchData(callback) {
+            // Simulate fetching data
+            setTimeout(() => callback('Data'), 1000);
+        }
+    </code>
+
+    <h3>Promises</h3>
+    <code>
+        const promise = new Promise((resolve, reject) => {
+            // Simulate async operation
+            setTimeout(() => resolve('Data'), 1000);
+        });
+    </code>
+
+    <h3>Async/Await</h3>
+    <code>
+        async function fetchDataAsync() {
+            const data = await promise;
+            console.log(data);
+        }
+    </code>
+
+    <h2>Event Handling</h2>
+    <code>
+        document.getElementById('button').addEventListener('click', () => {
+            console.log('Button clicked');
+        });
+    </code>
+
+    <h2>Array Methods</h2>
+    <p>Common methods include <code>forEach</code>, <code>map</code>, <code>filter</code>, <code>sort</code>, and <code>reduce</code>.</p>
+
+    <!-- Example for an arrow function -->
+    <h3>Example: Arrow Function</h3>
+    <code>const add = (a, b) => a + b;</code>
+
+    <!-- Example for a higher-order function -->
+    <h3>Example: Higher Order Function</h3>
+    <code>
+        function repeat(n, action) {
+            for (let i = 0; i < n; i++) {
+                action(i);
+            }
+        }
+        repeat(3, console.log); // Logs 0, 1, 2
+    </code>
+
+    <!-- Example for a DOM event listener -->
+    <h3>Example: DOM Event Listener</h3>
+    <code>
+        document.querySelector('button').addEventListener('click', () => {
+            console.log('Button was clicked');
+        });
+    </code>
+
+    <!-- Example for handling asynchronous calls with a promise -->
+    <h3>Example: Handling Asynchronous Calls</h3>
+    <code>
+        function getData() {
+            return new Promise(resolve => {
+                setTimeout(() => resolve('Some data'), 1000);
+            });
+        }
+        
+        getData().then(data => console.log(data));
+    </code>
+
+</body>
+</html>

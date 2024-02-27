@@ -1,0 +1,13 @@
+*{
+    background-color:aliceblue;
+}
+.p {
+    /* opacity: 0; */
+    transition: opacity 5s; /* Transition back to 0 opacity takes 5 seconds */
+}
+
+li:hover .p {
+    opacity: 1;
+    transition: opacity 0.5s; /* Transition to 1 opacity takes 0.5 seconds */
+}
+
